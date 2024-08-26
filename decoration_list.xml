@@ -1,0 +1,22 @@
+<odoo>
+    <field name="name" decoration-primary="1"/>
+    <field name="date" decoration-warning="date &lt; current_date"/>
+    <field name="status" decoration-danger="status == 'cancelled'"/>
+    <field name="amount" decoration-muted="amount &lt; 0"/>
+    <field name="remarks" decoration-info="remarks != False"/>
+    <field name="reference" decoration-underline="reference != False"/>
+    <field name="priority" decoration-highlight="priority == 'high'"/>
+    <field name="favourite" decoration-favorite="is_favorite"/>
+
+    <tree string="Your Tree View Title" 
+        decoration-info="field == 'info_value'" 
+        decoration-danger="field == 'danger_value'"
+        decoration-success="field == 'success_value'"
+        decoration-primary="field == 'primary_value'"
+        decoration-warning="field == 'warning_value'"
+        decoration-muted="field == 'muted_value'"
+        decoration-underline="field == 'underline_value'"
+        decoration-highlight="field == 'highlight_value'"
+        decoration-favorite="field == 'favorite_value'">
+    </tree>
+</odoo>

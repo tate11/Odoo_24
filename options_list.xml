@@ -1,0 +1,119 @@
+<odoo>
+    <!-- Tree View (List View) -->
+    <tree>
+        <!-- Simple field without options -->
+        <field name="name"/>
+        
+        <!-- Field with options for sorting and filtering -->
+        <field name="date" options="{'no_create': True}"/>
+        
+        <!-- Field with options for custom display -->
+        <field name="amount" options="{'currency_field': 'currency_id'}"/>
+        
+        <!-- Field with options to control column width -->
+        <field name="priority" options="{'width': '120px'}"/>
+        
+        <!-- Field with options for grouping -->
+        <field name="state" options="{'group_by': 'state'}"/>
+        
+        <!-- Field with options to disable sorting -->
+        <field name="partner_id" options="{'sortable': False}"/>
+        
+        <!-- Field with options for custom filter domains -->
+        <field name="category_id" options="{'domain': [('active', '=', True)]}"/>
+        
+        <!-- Field with options to control visibility based on conditions -->
+        <field name="user_id" options="{'groups': 'base.group_user'}"/>
+        
+        <!-- Field with options to display related records -->
+        <field name="order_id" options="{'widget': 'many2one', 'related_field': 'order_line_id'}"/>
+        
+        <!-- Field with options for custom sorting -->
+        <field name="amount" options="{'default_sort': 'desc'}"/>
+        
+        <!-- Field with options for displaying additional actions -->
+        <field name="invoice_id" options="{'widget': 'many2one', 'no_create': True}"/>
+        
+        <!-- Field with options for row coloring -->
+        <field name="priority" options="{'color': 'color_field'}"/>
+    </tree>
+
+    <!-- Form View -->
+    <form>
+        <!-- Simple field without options -->
+        <field name="name"/>
+        
+        <!-- Field with options for widget customization -->
+        <field name="description" widget="html" options="{'placeholder': 'Enter description here...'}"/>
+        
+        <!-- Field with options for related fields and context -->
+        <field name="partner_id" options="{'context': {'default_type': 'contact'}}"/>
+        
+        <!-- Field with options for advanced visibility rules -->
+        <field name="date" options="{'attrs': {'invisible': [('state', '!=', 'draft')]}}"/>
+        
+        <!-- Field with options for form layout -->
+        <field name="amount" options="{'widget': 'monetary', 'options': {'currency_field': 'currency_id'}}"/>
+        
+        <!-- Field with options for read-only attribute -->
+        <field name="user_id" options="{'readonly': True}"/>
+        
+        <!-- Field with options for placeholder text -->
+        <field name="note" options="{'placeholder': 'Type your note here...'}"/>
+        
+        <!-- Field with options for widget-specific settings -->
+        <field name="priority" widget="priority_widget" options="{'priority_level': 'high'}"/>
+    </form>
+
+    <!-- Kanban View -->
+    <kanban>
+        <!-- Simple field without options -->
+        <field name="name"/>
+        
+        <!-- Field with options for custom card content -->
+        <field name="description" options="{'widget': 'text', 'readonly': True}"/>
+        
+        <!-- Field with options for card styling and attributes -->
+        <field name="stage_id" options="{'widget': 'statusbar', 'status': 'stage'}"/>
+        
+        <!-- Field with options for card colors -->
+        <field name="color" options="{'widget': 'color_picker'}"/>
+        
+        <!-- Field with options for card display settings -->
+        <field name="summary" options="{'widget': 'text', 'no_create': True}"/>
+    </kanban>
+
+    <!-- Calendar View -->
+    <calendar>
+        <!-- Simple field without options -->
+        <field name="name"/>
+        
+        <!-- Field with options for calendar event customization -->
+        <field name="start_date" options="{'widget': 'datetime', 'display_time': True}"/>
+        
+        <!-- Field with options for color coding and styling -->
+        <field name="color" options="{'widget': 'color_picker'}"/>
+        
+        <!-- Field with options for custom calendar views -->
+        <field name="summary" options="{'widget': 'text', 'no_create': True}"/>
+    </calendar>
+
+    <!-- Gantt View -->
+    <gantt>
+        <!-- Simple field without options -->
+        <field name="name"/>
+        
+        <!-- Field with options for task and date display -->
+        <field name="start_date" options="{'widget': 'datetime', 'display_time': True}"/>
+        
+        <!-- Field with options for Gantt bar styling -->
+        <field name="progress" options="{'widget': 'progress_bar'}"/>
+        
+        <!-- Field with options for color coding in Gantt bars -->
+        <field name="color" options="{'widget': 'color_picker'}"/>
+        
+        <!-- Field with options for Gantt task layout -->
+        <field name="task_name" options="{'widget': 'task_widget', 'show_progress': True}"/>
+    </gantt>
+
+</odoo>

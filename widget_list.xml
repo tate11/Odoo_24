@@ -1,0 +1,80 @@
+<odoo>
+    <!-- Char -->
+    <field name="field_name" widget="char"/>
+
+    <!-- Text -->
+    <field name="field_name" widget="text"/>
+
+    <!-- Html -->
+    <field name="field_name" widget="html"/>
+
+    <!-- Date -->
+    <field name="field_name" widget="date"/>
+
+    <!-- DateTime -->
+    <field name="field_name" widget="datetime"/>
+
+    <!-- Boolean -->
+    <field name="field_name" widget="boolean"/>
+
+    <!-- Many2one -->
+    <field name="field_name" widget="many2one"/>
+
+    <!-- One2many -->
+    <field name="field_name" widget="one2many"/>
+
+    <!-- Many2many -->
+    <field name="field_name" widget="many2many"/>
+
+    <!-- Reference -->
+    <field name="field_name" widget="reference"/>
+
+    <!-- Selection -->
+    <field name="field_name" widget="selection"/>
+
+    <!-- Monetary -->
+    <field name="field_name" widget="monetary"/>
+
+    <!-- Float -->
+    <field name="field_name" widget="float"/>
+
+    <!-- Integer -->
+    <field name="field_name" widget="integer"/>
+
+    <!-- Image -->
+    <field name="field_name" widget="image"/>
+
+    <!-- Binary -->
+    <field name="field_name" widget="binary"/>
+
+    <!-- Statusbar -->
+    <field name="field_name" widget="statusbar"/>
+
+    <!-- Related -->
+    <field name="field_name" widget="related"/>
+
+    <!-- ProgressBar -->
+    <field name="field_name" widget="progressbar"/>
+
+    <!-- Email -->
+    <field name="field_name" widget="email"/>
+
+    <!-- Phone -->
+    <field name="field_name" widget="phone"/>
+
+    <!-- URL -->
+    <field name="field_name" widget="url"/>
+
+    <!-- Time -->
+    <field name="field_name" widget="time"/>
+
+    <!-- Color -->
+    <field name="field_name" widget="color"/>
+
+    <!-- File -->
+    <field name="field_name" widget="file"/>
+
+    <!-- FloatTime -->
+    <field name="field_name" widget="floattime"/>
+
+</odoo>

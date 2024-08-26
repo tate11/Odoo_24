@@ -1,0 +1,28 @@
+<odoo>
+    <field name="field_name" editable="top"/>
+    <field name="field_name" editable="bottom"/>
+
+    <field name="field_name" multi_edit="True"/>
+    <field name="field_name" multi_edit="False"/>
+
+    <field name="field_name" default_order="field_name asc"/>
+    <field name="field_name" default_order="field_name desc"/>
+
+    <field name="field_name" create="true"/>
+    <field name="field_name" create="false"/>
+
+    <field name="field_name" delete="true"/>
+    <field name="field_name" delete="false"/>
+
+    <field name="field_name" edit="true"/>
+    <field name="field_name" edit="false"/>
+
+    <field name="field_name" quick_create="True"/>
+    <field name="field_name" quick_create="False"/>
+
+    <field name="field_name" expand="1"/> <!-- For True -->
+    <field name="field_name" expand="0"/> <!-- For False -->
+
+    <field name="field_name" invisible="1"/> <!-- For True -->
+    <field name="field_name" invisible="0"/> <!-- For False -->
+</odoo>

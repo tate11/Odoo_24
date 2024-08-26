@@ -1,0 +1,107 @@
+<odoo>
+    <!-- Form View Standalone v17 -->
+    <record id="your_form_view_id" model="ir.ui.view">
+        <field name="name">your.model.form</field> <!-- A unique name for the form view -->
+        <field name="model">your.model.name</field> <!-- The model name this view is related to -->
+        <field name="arch" type="xml">
+        <field name="priority" eval=""/>
+            <form>
+                <header>
+                    <button name="button_method" 
+                        type="object" 
+                        string="Button Label" 
+                        icon="fa-check" 
+                        class="oe_highlight"
+                        invisible=""
+                        readonly=""/>
+
+                    <field
+                        name=""
+                        widget=""
+                        statusbar_visible="">
+                    </field>
+                </header>
+
+                <sheet>
+                    <group>
+                        <field name="field_1" 
+                            string="Field Label 1" 
+                            widget="" 
+                            options=""
+                            readonly=""
+                            invisible=""
+                            required=""
+                            sortable="True"/>
+                        <field name="field_2" 
+                            string="Field Label 2" 
+                            widget="" 
+                            options=""
+                            readonly=""
+                            invisible=""
+                            required=""
+                            sortable="True"/>
+                    </group>
+                    <notebook>
+                        <page string="">
+                            <group>
+                                <field name="field_1" 
+                                    string="Field Label 1" 
+                                    widget="" 
+                                    options=""
+                                    readonly=""
+                                    invisible=""
+                                    required=""
+                                    sortable="True"/>
+                                <field name="field_2" 
+                                    string="Field Label 2" 
+                                    widget="" 
+                                    options=""
+                                    readonly=""
+                                    invisible=""
+                                    required=""
+                                    sortable="True"/>
+                            </group>
+                        </page>
+                        <page string="">
+                            <tree>
+                                <field name="field_1" 
+                                    string="Field Label 1" 
+                                    widget="" 
+                                    options=""
+                                    readonly=""
+                                    invisible=""
+                                    required=""
+                                    sortable="True"/>
+                                <field name="field_2" 
+                                    string="Field Label 2" 
+                                    widget="" 
+                                    options=""
+                                    readonly=""
+                                    invisible=""
+                                    required=""
+                                    sortable="True"/>
+                            </tree>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+        <!-- Form View Action v17 -->
+        <record id="" model="ir.actions.act_window">
+            <field name="name"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_id" ref=""/>
+            <field name="search_view_id" ref=""/> [Optional]
+            <field name="domain"></field> [Optional]
+            <field name="context"></field> [Optional]
+            <field name="view_ids" eval=""/>
+            <field name="sequence"></field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">write_label</p>
+                <p> write_of_description</p>
+            </field>
+        </record>
+</odoo>

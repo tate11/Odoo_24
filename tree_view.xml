@@ -1,0 +1,61 @@
+<odoo>
+    <!-- Tree View Standalone v17 -->
+    <record id="your_tree_view_id" model="ir.ui.view">
+        <field name="name">your.model.tree</field> <!-- A unique name for the tree view -->
+        <field name="model">your.model.name</field> <!-- The model name this view is related to -->
+        <field name="arch" type="xml">
+        <field name="priority" eval=""/>
+            <tree string="Your Tree View Title" 
+                    decoration-info="field == 'info_value'" 
+                    decoration-danger="field == 'danger_value'"
+                    decoration-success="field == 'success_value'"
+                    editable="bottom"
+                    multi_edit="True"
+                    default_order="field_name desc"
+                    colors="blue:field_name == 'some_value';red:field_name == 'error_value'"
+                    create="false"
+                    delete="false"
+                    edit="false"
+                    quick_create="False"
+                    expand="1"
+                    column_invisible="{'column_name': [('field_name', '=', 'condition_value')]}">
+                    
+                <!-- Field Definitions -->
+                <field name="field_1" 
+                        string="Field Label 1" 
+                        widget="" 
+                        options=""
+                        readonly=""
+                        invisible=""
+                        required=""
+                        sortable="True"/>
+
+                <!-- Button in Tree View -->
+                <button name="button_method" 
+                        type="object" 
+                        string="Button Label" 
+                        icon="fa-check" 
+                        class="oe_highlight"
+                        invisible=""/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Tree View Action v17 -->
+    <record id="" model="ir.actions.act_window">
+        <field name="name"></field>
+        <field name="res_model"></field>
+        <field name="view_mode"></field>
+        <field name="view_id" ref=""/>
+        <field name="search_view_id" ref=""/> [Optional]
+        <field name="domain"></field> [Optional]
+        <field name="context"></field> [Optional]
+        <field name="view_ids" eval=""/>
+        <field name="sequence"></field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">write_label</p>
+            <p> write_of_description</p>
+        </field>
+    </record>
+
+</odoo>
